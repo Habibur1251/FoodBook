@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Home_MasterPage" %>
+
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie8">
+  <![endif]-->
+<!--[if (gte IE 9)|!(IE)]>
+  <!-->
+<html lang="en">
+    <form runat="server" id="form1">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Foodbook-- Restaurant Management
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Mobile Specific Metas -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Style -->
+    <!-- Start JavaScript -->
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <!-- jQuery library 1.10.2 -->
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <!-- Flex slider -->
+    <script src="js/jquery.easing.js"></script>
+    <!-- Optional FlexSlider Additions -->
+    <script type="text/javascript" src="js/responsive-nav.min.js"></script>
+    <!-- Responsive Navigation -->
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <!-- Instgram Feed -->
+    <script src="js/custom.js"></script>
+    <!-- Custom Js file for javascript in html -->
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-114x114.png">
+</head>
+<body>
+    <div id="fb-root">
+    </div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../connect.facebook.net/en_US/all.js#xfbml=1&appId=270693226405291";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header>
+        <div class="top-bar">
+            <div class="container clearfix">
+                <div class="row">
+                    <div class="col_1 col">
+                         <a href="#">Home</a>
+                            <a href="../Registration.aspx">Sign Up</a>
+                            <a href="../Login.aspx">Login</a>
+                    </div>
+                    <!-- End top links -->
+                    <div class="social col">
+                        <a href="#"><i class="icon-twitter"></i></a>
+                        <a href="#"><i class="icon-facebook"></i></a>
+                        <a href="#"><i class="icon-instagram"></i></a>
+                        <a href="#"><i class="icon-flickr"></i></a>
+                        <a href="#"><i class="icon-email"></i></a>
+                    </div>
+                    <!-- End social icons -->
+                </div>
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End top bar -->
+        <div class="main-header">
+            <div class="container clearfix">
+                <div class="row">
+                    <div id="logo" class="col">
+                        <a href="Default.aspx">
+                            <img src="../logo copy.png" width="237" height="50" alt="CookBook - Recipe HTML Theme" />
+                        </a>
+                    </div>
+                    <!-- End logo -->
+                    <div class="top-search col">
+                        <form  class="searchform" >
+                            <label for="s" class="assistive-text">
+                                Search
+               
+                            </label>
+                              <asp:TextBox CssClass="field" ID="searchtxt" placeholder="Search &hellip;" runat="server"></asp:TextBox>
+
+
+                            <asp:Button ID="search" runat="server" CssClass="submit button" Text="Submit" OnClick="search_Click" />
+                        </form>
+                    </div>
+                    <!-- End top-search -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- End main header -->
+    <div class="container clearfix">
+        <div class="row">
+            <div id="nav" class="col">
+                <ul>
+                    <li>
+                        <a href="Default.aspx">Home<i class="nav-icon icon-shop"></i></a>
+                    </li>
+                    <li>
+                        <a href="../Search/Default.aspx">Search<i class="nav-icon icon-food"></i></a>
+                    </li>
+                    <li>
+                        <a href="Blog.aspx">Blog<i class="nav-icon icon-doc"></i></a>
+                    </li>
+                    <li>
+                        <a href="Restaurants.aspx">All Restaurant<i class="nav-icon icon-calendar"></i></a>
+                    </li>
+                    <li>
+                        <a href="Contact.aspx">Contact<i class="nav-icon icon-mail"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End nav -->
+
+        </div>
+        
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+       
+
+    </div>
+
+     <div id="footer">
+            <div class="footer-upper container clearfix">
+                <div class="row">
+                    <div class="col_1 col">
+                        <h3 class="widget-title">About Food Book
+                        </h3>
+                        <p>
+                           Food Book is a restaurant management system. This site is develoepd by Habib,Eva,Rafat,Mehedi
+                        </p>
+                      
+                    </div>
+                    
+                    <div class="col fb-widget">
+                        <h3 class="widget-title">Site Map
+                        </h3>
+                        
+                           <div id="Div1" class="col">
+                        <ul>
+                            <li>
+                                <a href="#" class="active">Home<i class="nav-icon icon-shop"></i></a>
+                            </li>
+                            <li>
+                                <a href="../Search.aspx">Search<i class="nav-icon icon-food"></i></a>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog<i class="nav-icon icon-doc"></i></a>
+                            </li>
+                            <li>
+                                <a href="Restaurants.aspx">All Restaurant<i class="nav-icon icon-calendar"></i></a>
+                            </li>
+                            <li>
+                                <a href="Contact.aspx">Contact<i class="nav-icon icon-mail"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <!-- End footer-upper -->
+            <div class="footer-down clearfix">
+                <div class="container">
+                    <div class="copyright">
+                        Copyright © 2013
+            <a href="#" title="CooBook Theme">Habib</a>
+                        . All rights reserved.
+                    </div>
+                    <div class="credit">
+                        Designed by
+            <a href="http://munfactory.com/" title="munfactory">munfactory</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End footer-down -->
+        </div>
+    <!-- End Footer -->
+    <script type="text/javascript">
+        var navigation = responsiveNav("#nav", {
+            insert: "before"
+        });
+    </script>
+</body>
+        </form>
+</html>
